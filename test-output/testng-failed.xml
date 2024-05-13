@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Curs15.OpenBrowser">
+      <class name="Curs16.SotVersusHardAssertion">
         <methods>
-          <include name="openBrowser"/>
+          <include name="softAssert"/>
         </methods>
-      </class> <!-- Curs15.OpenBrowser -->
+      </class> <!-- Curs16.SotVersusHardAssertion -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
