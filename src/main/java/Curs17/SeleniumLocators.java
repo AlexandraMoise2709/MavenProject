@@ -88,4 +88,45 @@ public class SeleniumLocators extends BaseTest{
 		
 	}
 	
+	/*
+	 * isDisplayed()-> un eleent este vizibil
+	 * isEnabled () - >verifica daca un element este enbled
+	 * isSlected() -->doar pt checkbox sau radio button
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+	
+	@Test(priority=6)
+	public void numeLocator() throws InterruptedException {
+		
+		WebElement commentBox = browser.findElement(By.name("comment"));
+		commentBox.sendKeys("My super message");
+		Thread.sleep(3000);
+		commentBox.clear();
+		Thread.sleep(3000);
+		commentBox.sendKeys("Alt mesaj");
+		
+		
+	}
+	@Test(priority=7)
+	public void cssSelectorLocator() {
+		
+		//input[name='author']
+		
+		browser.findElement(By.cssSelector("input[name='author']")).sendKeys("Test");
+		
+	}
+	@Test(priority=8)
+	public void xpathLocator() {
+		
+		browser.findElement(By.xpath("//input[@type='email']")).sendKeys("test@test.com");
+		
+		
+		
+	}
+	
+	
 }
