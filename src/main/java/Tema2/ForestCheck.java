@@ -27,7 +27,7 @@ public class ForestCheck {
 		
 
 		List<WebElement> menuCategorii = browser.findElements(By.className("sc_tabs_title"));
-		WebElement bookForest = browser.findElement(By.xpath("//img[@src='https://keybooks.ro/wp-content/uploads/2016/04/book3.jpg']"));
+		WebElement bookForest = browser.findElement(By.xpath("//img[@src='https://keybooks.ro/wp-content/uploads/2016/04/book2.jpg']"));
 			
 		for (int i = 0; i < menuCategorii.size(); i++) {
             WebElement element = menuCategorii.get(i);			
