@@ -1,22 +1,27 @@
 package Curs17;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import com.sun.tools.javac.util.List;
-
 import SeleniumUtils.BaseTest;
 
-public class FindElements extends BaseTest {
-	
+
+
+public class FindElements extends BaseTest{
+
 	@Test
-	public vWebElementementsExemple() {
+	public void findElementsExample() {
 		
-		List<WebElement> manuTabs= browser.findElements(By.ByCssSelector("li[role='tab']"));
+		List<WebElement> menuTabs = browser.findElements(By.cssSelector("li[role='tab']"));
 		
-		System.out.println(manuTabs.size());
+		System.out.println(menuTabs.size());
+	
+		menuTabs.get(2).click();
 		
 	}
-
+	
+	
 }
