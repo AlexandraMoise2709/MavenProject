@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tema2.ForestCheck">
+      <class name="Curs18.CssSelectorExample">
         <methods>
-          <include name="verificaCartea"/>
+          <include name="login"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- Tema2.ForestCheck -->
+      </class> <!-- Curs18.CssSelectorExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
