@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Curs18.CssSelectorExample">
+      <class name="Curs18.RelativeLocatorsExample">
         <methods>
           <include name="login"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Curs18.CssSelectorExample -->
+      </class> <!-- Curs18.RelativeLocatorsExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

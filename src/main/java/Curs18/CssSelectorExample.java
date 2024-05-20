@@ -75,16 +75,16 @@ public class CssSelectorExample extends BaseTest {
 			jse.executeScript("arguments[0].setAttribute('style', 'background:yellow; border:4px solid green;')", book1);
 			
 			
-			//^
+			//^ incepe cu un anumit string
 			
 			WebElement book2Element = browser.findElement(By.cssSelector("a[href^='life']"));
 			jse.executeScript("arguments[0].setAttribute('style', 'background:yellow; border:4px solid green;')", book2Element);
 			
-			//$
+			//$ --se termina cu un anumit string
 			WebElement book3Element = browser.findElement(By.cssSelector("a[href$='story']"));
 			jse.executeScript("arguments[0].setAttribute('style', 'background:yellow; border:4px solid green;')", book3Element);
 			
-			//div[class~='wpb_content_element']
+			//contains word
 			WebElement book4Element = browser.findElement(By.cssSelector("div[class~='wpb_content_element']"));
 			jse.executeScript("arguments[0].setAttribute('style', 'background:yellow; border:4px solid green;')", book4Element);
 			
