@@ -27,10 +27,6 @@ public class BaseTest {
 		browser.quit();
 	}
 	
-	@Test
-	public void login() {
 
-		browser.findElement(By.linkText("My account")).click();
-	}
 	
 }
