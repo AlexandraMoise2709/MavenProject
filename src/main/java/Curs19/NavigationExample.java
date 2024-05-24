@@ -1,5 +1,28 @@
 package Curs19;
 
-public class NavigationExample {
+import org.testng.annotations.Test;
+
+import SeleniumUtils.BaseTest;
+
+
+
+public class NavigationExample extends BaseTest {
+	
+	@Test
+	public void navigationExample() throws InterruptedException {
+		
+	/*	browser.navigate().to("https://keyfood.ro/");
+		Thread.sleep(3000);
+		browser.navigate().back();
+		Thread.sleep(3000);
+		browser.navigate().forward();
+		Thread.sleep(3000);
+		browser.navigate().refresh(); */
+		
+		System.err.println("Print ceva");
+		
+	}
+	
+	
 
 }

@@ -1,14 +1,13 @@
-package SeleniumUtils;
+package Tema3;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
-public class BaseTest {
+public class HomeWorkBaseTest {
 
+	
 public WebDriver browser;
 	
 	@BeforeClass
@@ -16,7 +15,7 @@ public WebDriver browser;
 		
 		browser = new ChromeDriver();
 		browser.manage().window().maximize();
-		browser.get("https://keybooks.ro");
+		browser.get("https://keybooks.ro/contacts/");
 	}
 	
 	@AfterClass
@@ -25,5 +24,6 @@ public WebDriver browser;
 		browser.quit();
 	}
 
+	
 	
 }

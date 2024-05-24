@@ -1,102 +1,91 @@
 package Curs19;
 
+import javax.sql.rowset.BaseRowSet;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import SeleniumUtils.BaseTest;
 
 
-
 public class CssSelectorExample extends BaseTest{
 
-	/* 
-	 * tagname[atribut=valoareAtribut]
-	 * 
-	 * <li class="menu_user_login">
-	 * li --> tagname
-	 * class--> atribut
-	 * menu_user_login --> valoare atribut
-	 * 
-	 * li[class='menu_user_login']
-	 * 
-	 * li.menu_user_login  --> li[class='menu_user_login']
-	 * 
-	 * .menu_user_login --> [class='menu_user_login']
-	 * 
-	 * 
-	 */
-	
 	
 	//@Test
 	public void cssSelectorExample1() {
-	JavascriptExecutor jse = (JavascriptExecutor)browser;
+		JavascriptExecutor jse = (JavascriptExecutor)browser;
+		//direct child -- > adica >
+		browser.findElement(By.cssSelector("li[class='menu_user_login']>a")).click();
 		
-	// . --> class	
-	WebElement loginLink = browser.findElement(By.cssSelector(".menu_user_login"));	
-	jse.executeScript("arguments[0].setAttribute"
-			+ "('style', 'background:yellow; border:4px solid green;')", loginLink);
+		//descendant --> adica un spatiu intre caracterul parinte si caracterul de tip descendant
+		WebElement username = browser.findElement
+				(By.cssSelector("ul[id='menu_user'] input[name='log']"));
+		
+		jse.executeScript("arguments[0].setAttribute"
+				+ "('style', 'background:yellow; border:4px solid green;')", username);
+		
+		
+		WebElement password = browser.findElement
+				(By.cssSelector("ul#menu_user form.login_form>div.password_field>input[type='password']"));
+			
+		jse.executeScript("arguments[0].setAttribute"
+				+ "('style', 'background:yellow; border:4px solid green;')", password);
 	
-	loginLink.click();
-	
-	// # --> id
-	WebElement user = browser.findElement(By.cssSelector("input#log"));
-	jse.executeScript("arguments[0].setAttribute"
-			+ "('style', 'background:yellow; border:4px solid green;')", user);
-	
-	user.sendKeys("Test");
-	
-	// logical AND
-	WebElement pass = browser.findElement
-			(By.cssSelector("input[name='pwd'][placeholder='Password'][type='Password']"));
-	
-	jse.executeScript("arguments[0].setAttribute"
-			+ "('style', 'background:pink; border:4px solid black;')", pass);
-	
-	pass.sendKeys("test");
-	
-	//logical OR
-	WebElement rememeberMe = browser.findElement
-			(By.cssSelector("input[id='rememberme'],[type='checkbox'],[value='forever']"));
-	
-	rememeberMe.click();
-	
-	//direct child -->   >
-	WebElement submitButton = browser.findElement
-			(By.cssSelector("form[name='login_form']>div>input[class='submit_button']"));
-	
-	jse.executeScript("arguments[0].setAttribute"
-			+ "('style', 'background:pink; border:4px solid red;')", submitButton);
-	
-	
-	submitButton.click();
+		//not()
+		WebElement checkbox = browser.findElement
+				(By.cssSelector("ul input:not([type='hidden'],[type='text'],[type='password'],[type='submit'])"));
+		jse.executeScript("arguments[0].setAttribute"
+				+ "('style', 'background:yellow; border:4px solid green;')", checkbox);
+		checkbox.click();
 	}
 	
 	@Test
-	public void cssSelectorExample2() {
+	public void cssExample2() {
 		JavascriptExecutor jse = (JavascriptExecutor)browser;
 
+		browser.findElement
+			(By.cssSelector("div[class='menu_main_wrap'] a[href='https://keybooks.ro/shop/']"))
+			.click();
 		
-		// * --> contains
-		WebElement book1 = browser.findElement
-				(By.cssSelector("a[href*='deep-silence']"));
+		Actions action = new Actions(browser);
+		action.scrollByAmount(0, 1200).perform();
+		
+		//first-child
+		WebElement category1 = browser.findElement
+				(By.cssSelector("ul[class='product-categories']>li:first-child"));
+		
 		jse.executeScript("arguments[0].setAttribute"
-				+ "('style', 'background:pink; border:4px solid red;')", book1);
-		// ^ --> starts with
-		WebElement book2 = browser.findElement(By.cssSelector("a[href^=\"life\"]"));
+				+ "('style', 'background:yellow; border:4px solid green;')", category1);
+		
+		//last-child
+		WebElement category11 = browser.findElement
+				(By.cssSelector("ul[class='product-categories']>li:last-child"));
+		
 		jse.executeScript("arguments[0].setAttribute"
-				+ "('style', 'background:yellow; border:4px solid green;')", book2);
-		// $ --> ends with
-		WebElement book3 = browser.findElement(By.cssSelector("a[href$='story']"));
-		jse.executeScript("arguments[0].setAttribute"
-				+ "('style', 'background:yellow; border:4px solid green;')", book3);
-		// ~ --> contains word
-		WebElement book4 = browser.findElement(By.cssSelector("div[class~='wpb_content_element']"));
-		jse.executeScript("arguments[0].setAttribute"
-				+ "('style', 'background:yellow; border:4px solid green;')", book4);
-	}
+				+ "('style', 'background:yellow; border:4px solid green;')", category11);
 	
+		//nth-child()
+		WebElement category5 = browser.findElement
+				(By.cssSelector("ul[class='product-categories']>li:nth-child(5)"));
+		
+		jse.executeScript("arguments[0].setAttribute"
+				+ "('style', 'background:yellow; border:4px solid green;')", category5);
+		
+		
+		//selectez din n in n (n = ce nr vreau eu)
+		// --> ul[class='product-categories']>li:nth-child(4n)
+		
+		
+		//selectez din n in n pornind de la un anumit numar
+		//--> ul[class='product-categories']>li:nth-child(2n+4)
+		
+		//selectez par sau impar
+		//--> ul[class='product-categories']>li:nth-child(even)
+		//--> ul[class='product-categories']>li:nth-child(odd)
+	}
 	
 	
 }
