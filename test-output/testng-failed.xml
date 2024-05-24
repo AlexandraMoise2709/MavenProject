@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Curs19.IsEnabled">
+      <class name="Tema2.ForestCheck">
         <methods>
-          <include name="isEnabled"/>
-          <include name="setup"/>
+          <include name="verificaCartea"/>
         </methods>
-      </class> <!-- Curs19.IsEnabled -->
+      </class> <!-- Tema2.ForestCheck -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

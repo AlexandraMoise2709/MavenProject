@@ -17,7 +17,7 @@ public class ForestCheck {
 	public WebDriver browser;
 	
 	@Test
-	public void verificaCartea() {
+	public void verificaCartea() throws InterruptedException {
 		
 		
 		browser = new ChromeDriver();
@@ -27,22 +27,38 @@ public class ForestCheck {
 		
 
 		List<WebElement> menuCategorii = browser.findElements(By.className("sc_tabs_title"));
-		WebElement bookForest = browser.findElement(By.xpath("//img[@src='https://keybooks.ro/wp-content/uploads/2016/04/book2.jpg']"));
+		
 			
 		for (int i = 0; i < menuCategorii.size(); i++) {
-            WebElement element = menuCategorii.get(i);			
-			element.click();			
+            WebElement element = menuCategorii.get(i);
+            
+            Thread.sleep(1000);
+					
+		
+			
+			WebElement bookForest = browser.findElement(By.cssSelector("div[aria-hidden='false'] a[href='the-forest']"));
 			assertTrue(bookForest.isDisplayed());
 			
-			if(i == menuCategorii.size()-1) {
-				WebElement clickPeCarte = browser.findElement(By.partialLinkText("forest"));
-				clickPeCarte.click();
-				assertEquals(browser.getCurrentUrl(),"https://keybooks.ro/shop/the-forest/");
-			}
+			element.click();	
+			
+            if(i == menuCategorii.size()-1) {
+
+                WebElement clickPeCarte = browser.findElement(By.cssSelector("div[aria-hidden='false'] a[href='the-forest']"));
+                Thread.sleep(3000);
+
+                clickPeCarte.click();
+                
+                Thread.sleep(3000);
+
+                assertEquals(browser.getCurrentUrl(),"https://keybooks.ro/shop/the-forest/");
+
+                }
+
+           }
 			
 		
 		}
 		
 	}
 
-}
+
