@@ -3,7 +3,6 @@ package Tema3;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -31,9 +30,10 @@ public class ContactPage extends HomeWorkBaseTest {
 		sendMessage.click();
 		
 		WebElement actualText = browser.findElement(By.cssSelector("[class=wpcf7-response-output]"));
-		Thread.sleep(5000);//stiu ca e bad practice
+		browser.navigate().wait(3000);
+		//Thread.sleep(5000);//stiu ca e bad practice
 
-		String expectedText = "Thank you for your message. It has been sent.";
+		String expectedText = "Thank you for your message. It has been sent";
 		assertEquals(actualText.getText(), expectedText);
 		
 		
