@@ -5,8 +5,7 @@
     <classes>
       <class name="Tema4.CautareCarte">
         <methods>
-          <include name="tearDown"/>
-          <include name="cautaCarte"/>
+          <include name="verificaCart"/>
           <include name="setup"/>
         </methods>
       </class> <!-- Tema4.CautareCarte -->
