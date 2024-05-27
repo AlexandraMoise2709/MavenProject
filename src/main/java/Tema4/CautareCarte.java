@@ -13,7 +13,7 @@ public class CautareCarte extends BaseTest{
 	
 	
 
-	@Test
+	@Test(priority=0)
 	public void cautaCarte() throws InterruptedException {
 		
 		
@@ -53,7 +53,7 @@ public class CautareCarte extends BaseTest{
 		
 	}  
 		
-		@Test
+		@Test(priority=1)
 		public void verificaCart() throws InterruptedException {
 			
 			WebElement addQuanity = browser.findElement(By.cssSelector("[class=q_inc]"));

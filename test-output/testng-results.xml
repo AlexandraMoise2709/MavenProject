@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-26T12:08:22 EEST" name="Default suite" finished-at="2024-05-26T12:08:43 EEST" duration-ms="20708">
+  <suite started-at="2024-05-27T18:26:11 EEST" name="Default suite" finished-at="2024-05-27T18:26:34 EEST" duration-ms="23000">
     <groups>
     </groups>
-    <test started-at="2024-05-26T12:08:22 EEST" name="Default test" finished-at="2024-05-26T12:08:43 EEST" duration-ms="20708">
+    <test started-at="2024-05-27T18:26:11 EEST" name="Default test" finished-at="2024-05-27T18:26:34 EEST" duration-ms="23000">
       <class name="Tema4.CautareCarte">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Tema4.CautareCarte@57cf54e1]" started-at="2024-05-26T12:08:22 EEST" name="setup" finished-at="2024-05-26T12:08:25 EEST" duration-ms="2465" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Tema4.CautareCarte@57cf54e1]" started-at="2024-05-27T18:26:11 EEST" name="setup" finished-at="2024-05-27T18:26:15 EEST" duration-ms="3398" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="cautaCarte()[pri:0, instance:Tema4.CautareCarte@57cf54e1]" started-at="2024-05-26T12:08:25 EEST" name="cautaCarte" finished-at="2024-05-26T12:08:37 EEST" duration-ms="12303" status="PASS">
+        <test-method signature="cautaCarte()[pri:0, instance:Tema4.CautareCarte@57cf54e1]" started-at="2024-05-27T18:26:15 EEST" name="cautaCarte" finished-at="2024-05-27T18:26:28 EEST" duration-ms="13142" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cautaCarte -->
-        <test-method signature="verificaCart()[pri:0, instance:Tema4.CautareCarte@57cf54e1]" started-at="2024-05-26T12:08:37 EEST" name="verificaCart" finished-at="2024-05-26T12:08:43 EEST" duration-ms="5903" status="PASS">
+        <test-method signature="verificaCart()[pri:1, instance:Tema4.CautareCarte@57cf54e1]" started-at="2024-05-27T18:26:28 EEST" name="verificaCart" finished-at="2024-05-27T18:26:34 EEST" duration-ms="6406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verificaCart -->

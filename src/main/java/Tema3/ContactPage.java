@@ -33,7 +33,7 @@ public class ContactPage extends HomeWorkBaseTest {
 		browser.navigate().wait(3000);
 		//Thread.sleep(5000);//stiu ca e bad practice
 
-		String expectedText = "Thank you for your message. It has been sent";
+		String expectedText = "Thank you for your message. It has been sent.";
 		assertEquals(actualText.getText(), expectedText);
 		
 		
