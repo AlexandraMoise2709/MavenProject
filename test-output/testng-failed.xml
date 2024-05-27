@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Tema4.CautareCarte">
+      <class name="Curs20.JsAlertExample">
         <methods>
-          <include name="verificaCart"/>
-          <include name="cautaCarte"/>
+          <include name="promptJsAlert"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Tema4.CautareCarte -->
+      </class> <!-- Curs20.JsAlertExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

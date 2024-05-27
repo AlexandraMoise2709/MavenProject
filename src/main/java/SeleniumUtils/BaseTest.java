@@ -15,6 +15,7 @@ public WebDriver browser;
 	public void setup() {
 		
 		browser = new ChromeDriver();
+		browser.get("https://the-internet.herokuapp.com/dynamic_loading/2");
 		browser.manage().window().maximize();
 		browser.get("https://keybooks.ro");
 	}
