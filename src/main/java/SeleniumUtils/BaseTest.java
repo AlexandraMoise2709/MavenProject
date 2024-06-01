@@ -1,30 +1,32 @@
 package SeleniumUtils;
 
-import org.openqa.selenium.By;
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 public class BaseTest {
 
-public WebDriver browser;
+	public WebDriver browser;
 	
 	@BeforeClass
 	public void setup() {
 		
 		browser = new ChromeDriver();
-		browser.get("https://the-internet.herokuapp.com/dynamic_loading/2");
 		browser.manage().window().maximize();
+		browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 		browser.get("https://keybooks.ro");
 	}
 	
-	//@AfterClass
+	@AfterClass
 	public void tearDown() throws InterruptedException  {
 		Thread.sleep(5000);//bad practice
 		browser.quit();
 	}
-
+	
+	
 	
 }

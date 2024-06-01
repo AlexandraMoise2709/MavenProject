@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Curs20.JsAlertExample">
+      <class name="Curs20.ImplicitWaitExample">
         <methods>
-          <include name="promptJsAlert"/>
+          <include name="implicitWaits"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- Curs20.JsAlertExample -->
+      </class> <!-- Curs20.ImplicitWaitExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

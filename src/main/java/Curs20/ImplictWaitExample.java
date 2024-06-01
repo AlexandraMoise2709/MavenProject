@@ -1,6 +1,6 @@
 package Curs20;
 
-import static org.junit.Assert.*;
+import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
 
@@ -10,23 +10,22 @@ import org.testng.annotations.Test;
 
 import SeleniumUtils.BaseTest;
 
-public class ImplicitWaitExample extends BaseTest {
-	
+
+public class ImplictWaitExample extends BaseTest{
+
 	@Test
-	public void implicitWaits() throws InterruptedException {
+	public void implictWait() throws InterruptedException {
 		
+		browser.get("https://the-internet.herokuapp.com/dynamic_loading/1");
 		
-		
-		//asteapta ca elementul sa fie prezent in dom
+		//astepta ca elementul sa fie prezent in DOM
 		browser.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
 		browser.findElement(By.cssSelector("div[id='start']>button")).click();
 		
+		//Thread.sleep(10000);//bad practice
 		
 		WebElement finishText = browser.findElement(By.cssSelector("div[id='finish']>h4"));
-		
-		/Thread.sleep(5000);//bad practice
-		
-		
 		assertEquals(finishText.getText(), "Hello World!");
 		
 	}
